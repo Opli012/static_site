@@ -51,13 +51,13 @@ class TestTextNodeToHTMLNode(unittest.TestCase):
         self.assertEqual(html_node.value, "This is a text node")
 
     def test_image(self):
-        node = TextNode("This is an image", TextType.IMAGE, "https://www.boot.dev")
+        node = TextNode("This is an image", TextType.IMAGE, "https://www.youtube.com")
         html_node = text_node_to_html_node(node)
         self.assertEqual(html_node.tag, "img")
         self.assertEqual(html_node.value, "")
         self.assertEqual(
             html_node.props,
-            {"src": "https://www.boot.dev", "alt": "This is an image"},
+            {"src": "https://www.youtube.com", "alt": "This is an image"},
         )
 
     def test_bold(self):
