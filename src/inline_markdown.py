@@ -98,10 +98,3 @@ def split_nodes_link(old_nodes):
         if original_text != "":
             new_nodes.append(TextNode(original_text, TextType.TEXT))
     return new_nodes
-
-
-def markdown_to_blocks(markdown):
-    block_list = markdown.split("\n\n")
-    for i in range(len(block_list)):
-        block_list[i] = block_list[i].strip("\n")
-    return block_list
